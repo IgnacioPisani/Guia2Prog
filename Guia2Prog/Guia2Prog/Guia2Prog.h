@@ -11,6 +11,7 @@ int TotalPuntos = 0;
 void IngresarVidaDanio();
 int CalcularVidaRestante(int vida, int danio);
 void ChequearVida(int vida);
+void MostrarVidaResultante(int vida);
 int Vida = 0;
 int Danio = 0;
 
@@ -30,7 +31,7 @@ int Nivel = 0;
 //EJERCICIO5
 void IngresarMonedasMultiplicador();
 void ChequearBonificacion(int multiplicador);
-int CalcularTotalMonedas(int monedas,int multiplicador);
+void MostrarTotalMonedas(int monedas,int multiplicador);
 int CantMonedas = 0;
 int Multiplicador = 0;
 int TotalMonedas = 0;
@@ -41,24 +42,23 @@ void IngresarMonedasTipoObjeto();
 void ChequearTipoObjeto(int tipoObjeto, int monedas);
 void CalcularMonedasCompra(int monedas, int precio);
 int TipoObjeto = 0;
-enum ETipoObjeto
-{
-	Espada,
-    Escudo,
-	Pocion
+enum ETipoObjeto{
+	ESPADA = 1,
+	ESCUDO = 2,
+	POCION = 3
 };
-
 
 //EJERCICIO7
 void IngresarNumeros();
 int Sumar(int num1, int num2);
 void ChequearTipoRecurso(int tipoRecurso);
+void MostrarTotal(int total);
 int TipoRecurso = 0;
 enum ETipoRecurso
 {
-	Puntos,
-	Monedas,
-	Experiencia
+	PUNTOS = 1,
+	MONEDAS = 2,
+	EXPERIENCIA = 3
 };
 int Num1 = 0;
 int Num2 = 0;
@@ -85,9 +85,9 @@ float MultiplicadorCritico = 0.f;
 //EJERCICIO10
 
 void IngresarMinutos();
-void calcularTiempo(int min1,int min2, int min3);
+void CalcularTiempo(int min1,int min2, int min3);
 std::string FormatearTiempo(int horas, int minutos);
-void chequearHoras(int horas);
+void ChequearHoras(int horas);
 int MinDia1 = 0;
 int MinDia2 = 0;
 int MinDia3 = 0;
@@ -100,6 +100,7 @@ int MinutosRestantesPromedio = 0;
 
 //EJERCICIO11
 void IngresarStatsJugadorEnemigo();
+void MostrarVidaFinal();
 int CalcularDanioLimitado(int atq, int dfs);
 void ChequearVidaJugadorEnemigo(int vidaJugador, int vidaEnemigo);
 std::string NombreEnemigo;
